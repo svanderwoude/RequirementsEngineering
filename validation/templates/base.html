@@ -1,0 +1,24 @@
+{% load static %}
+<html>
+    <head>
+        <title>Vragenlijst</title>
+         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" />
+    </head>
+    <body>
+        <main>
+            <h1>Vragenlijst data-verzameling</h1>
+            <p>
+            Beste deelnemer,<br/>
+            Hieronder staan een aantal gegevens met betrekking tot de data-verzameling van een bedrijf. Voor dit experiment vragen wij je om dit goed te bestuderen, en daarna de vraag / vragen onderaan de pagina te beantwoorden. Om het experiment succesvol af te laten lopen is het noodzakelijk dat de vragen <b>naar waarheid</b> beantwoord dienen te worden.<br/>
+            <br/>
+            Alvast bedankt!
+            </p>
+
+            <h2>Gegevens</h2>
+            {% block content %}
+            
+            {% endblock content %}
+        </main>
+    </body>
+</html>

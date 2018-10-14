@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="list-wrapper">
+    <div class="list-item">
+        <div class="list-icon"></div>
+        <div class="list-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut neque pharetra, sodales urna at, auctor nunc. Phasellus commodo dolor velit, in bibendum nisi pulvinar vitae. Cras interdum quam nec imperdiet mattis. Pellentesque aliquam tortor a iaculis cursus. Integer mauris lectus, tempus id scelerisque vitae, condimentum at eros.
+        </div>
+    </div>
+    <div class="list-item">
+        <div class="list-icon"></div>
+        <div class="list-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ac aliquam mauris. Suspendisse finibus diam odio, quis tempus nisl consectetur dapibus. Maecenas sed consectetur ipsum. Nunc ultrices eros a dui dictum, id mollis neque commodo. Pellentesque id finibus tortor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+        </div>
+    </div>
+</div>
+
+<h2>Vragen</h2>
+<p>
+    Hierboven heb je een lijst gezien met type data welke een bedrijf wordt verzamelt. Op basis van deze gegevens willen we je vragen om in te vullen in hoeverre je dit bedrijf zou vertrouwen.
+</p>
+{% if average %}
+<p class="attention{% if version == 2 %} good{% endif %}">
+    De gemiddelde score die voorgaande deelnemers aangegeven hebben is een <b>{{ average }}</b>
+</p>
+{% endif %}
+
+{% include 'scoreform.html' %}
+{% endblock content %}
