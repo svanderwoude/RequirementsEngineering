@@ -24,7 +24,7 @@ h1{
 .list-item{
     border-radius: 2px;
     display: flex;
-    min-height: 100px;
+    min-height: 70px;
     width: 100%;
 }
 
@@ -34,11 +34,31 @@ h1{
 
 .list-icon{
     background-image: url(/static/img/default_icon.svg);
-    background-position: 5px 5px;
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: 35px 35px;
-    height: 80px;
-    width: 80px;
+    height: 70px;
+    width: 70px;
+}
+
+.list-icon.name{
+    background-image: url(/static/img/face_icon.svg);
+}
+
+.list-icon.education{
+    background-image: url(/static/img/education_icon.svg);
+}
+.list-icon.email{
+    background-image: url(/static/img/email_icon.svg);
+}
+.list-icon.money{
+    background-image: url(/static/img/euro_icon.svg);
+}
+.list-icon.event{
+    background-image: url(/static/img/event_icon.svg);
+}
+.list-icon.house{
+    background-image: url(/static/img/house_icon.svg);
 }
 
 .list-text{

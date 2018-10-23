@@ -57,5 +57,19 @@ def authority(request, version):
     })
 
 
+def rand_anchoring(request):
+    results = AnchoringResult.objects.all()
+    v1 = results.filter(version=3).count()
+    v2 = results.filter(version=8.5).count()
+    v3 = results.filter(version=0.0).count()
+
+    counts = [v1, v2, v3]
+    m = counts.index(min(counts))
+    version = m+1
+
+    return HttpResponseRedirect(reverse('anchoring', args=[version, ]))
+
+
 def thanks(request):
     return render(request, 'thanks.html', {})
+

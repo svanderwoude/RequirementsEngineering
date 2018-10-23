@@ -4,22 +4,52 @@
 {% block content %}
 <div class="list-wrapper">
     <div class="list-item">
-        <div class="list-icon"></div>
+        <div class="list-icon name"></div>
         <div class="list-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut neque pharetra, sodales urna at, auctor nunc. Phasellus commodo dolor velit, in bibendum nisi pulvinar vitae. Cras interdum quam nec imperdiet mattis. Pellentesque aliquam tortor a iaculis cursus. Integer mauris lectus, tempus id scelerisque vitae, condimentum at eros.
+            <b>Volledige naam</b><br/>
+            Het bedrijf is in het bezit van de volledige naam van alle gebruikers.
         </div>
     </div>
     <div class="list-item">
-        <div class="list-icon"></div>
+        <div class="list-icon event"></div>
         <div class="list-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ac aliquam mauris. Suspendisse finibus diam odio, quis tempus nisl consectetur dapibus. Maecenas sed consectetur ipsum. Nunc ultrices eros a dui dictum, id mollis neque commodo. Pellentesque id finibus tortor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+            <b>Geboortedatum</b><br/>
+            Het bedrijf weet hoe oud haar gebruikers zijn, en wanneer ze jarig zijn.
+        </div>
+    </div>
+    <div class="list-item">
+        <div class="list-icon email"></div>
+        <div class="list-text">
+            <b>E-mailadres</b><br/>
+            Het bedrijf bezit een database met e-mailadressen van haar gebruikers.
+        </div>
+    </div>
+    <div class="list-item">
+        <div class="list-icon house"></div>
+        <div class="list-text">
+            <b>Adresgegevens</b><br/>
+            De adresgegevens van alle gebruikers op het platform zijn bekend bij het bedrijf.
+        </div>
+    </div>
+    <div class="list-item">
+        <div class="list-icon education"></div>
+        <div class="list-text">
+            <b>Opleiding</b><br/>
+            Het bedrijf is in bezit van de opleidingsgegevens van alle gebruikers. Hierbij is het in ieder geval bekend wanneer en waar de opleidingen zijn gevolgd.
+        </div>
+    </div>
+    <div class="list-item">
+        <div class="list-icon money"></div>
+        <div class="list-text">
+            <b>Inkomen</b><br/>
+            Het bedrijf weet van alle gebruikers in welke schaal zij vallen inkomensgewijs.
         </div>
     </div>
 </div>
 
 <h2>Vragen</h2>
 <p>
-    Hierboven heb je een lijst gezien met type data welke een bedrijf wordt verzamelt. Op basis van deze gegevens willen we je vragen om in te vullen in hoeverre je dit bedrijf zou vertrouwen.
+    Hierboven heb je een lijst gezien van gegevens die een bedrijf over jou, als gebruiker, heeft verzameld. Op basis van deze gegevens willen we je vragen om in te vullen in hoeverre je dit bedrijf zou vertrouwen.
 </p>
 {% if average %}
 <p class="attention{% if version == 2 %} good{% endif %}">
