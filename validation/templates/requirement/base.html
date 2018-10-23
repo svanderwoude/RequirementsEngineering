@@ -1,0 +1,25 @@
+{% load static %}
+<html>
+    <head>
+        <title>Data collection</title>
+         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'css/requirement/base.css' %}" />
+    </head>
+    <body>
+        <main>
+            <h1>Data-collection</h1>
+            {% block introduction %}
+            <p>
+                Nowadays we all use the internet. As we have seen in the past year there is a lot of controversial data collection by companies such as Facebook. Since a lot of the specifics are unknown by many people we have been working on a tool that allows you to quickly see what data is collected by a company. You can use this to decide whether or not you like to (continue to) use their service or not.
+            </p>
+            <p>
+                Below we have listed a sample set of companies that collect data from their users. If you feel like you want to know more about one of these companies, you can continue to their individual pages and see the data they collect about you. If you do so, we would like to know what you think of the overview.
+            </p>
+            {% endblock introduction %}
+            {% block content %}
+            
+            {% endblock content %}
+        </main>
+    </body>
+</html>

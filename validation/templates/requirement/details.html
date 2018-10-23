@@ -1,0 +1,29 @@
+{% extends 'requirement/base.html' %}
+{% load static %}
+
+{% block introduction %}
+<h2>{{ company.name }}</h2>
+{% endblock introduction %}
+
+{% block content %}
+<div class="list-wrapper">
+    {% for data in datalist %}
+        <div class="list-item">
+            <div class="list-text">
+                <b>{{ data.title }}</b>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+<p>
+    Did you think this overview was useful? Do you think this is interesting for other companies as well?
+</p>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    <input type="radio" name="useful" value="n" required> No<br>
+    <input type="radio" name="useful" value="y" required> Yes<br>
+    <button type="submit">Send answer (and go back to overview)</button>
+</form>
+{% endblock content %}

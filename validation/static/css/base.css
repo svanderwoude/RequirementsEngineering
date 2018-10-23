@@ -84,6 +84,7 @@ p.attention.info{
     background: #03a9f4;
 }
 
+.button,
 button{
     border: 0;
     border-radius: 2px;

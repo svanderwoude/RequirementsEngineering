@@ -1,0 +1,24 @@
+.company{
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    display: block;
+    margin-bottom: 15px;
+    max-width: 300px;
+    padding: 15px 10px;
+    position: relative;
+    width: 100%;
+}
+
+.company-title{
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.continue{
+    border: 1px solid rgba(0,0,0,0.06);
+    box-shadow: none;
+    font-size: 14px;
+}
+
+.continue:hover{
+    background: #90caf9;
+}

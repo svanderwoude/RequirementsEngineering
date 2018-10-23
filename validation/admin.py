@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import AnchoringResult
+from .models import AnchoringResult, Company, Data, Useful
 
 
 class AnchoringResultAdmin(admin.ModelAdmin):
@@ -10,3 +10,6 @@ class AnchoringResultAdmin(admin.ModelAdmin):
 
 
 admin.site.register(AnchoringResult, AnchoringResultAdmin)
+admin.site.register(Company)
+admin.site.register(Data)
+admin.site.register(Useful)

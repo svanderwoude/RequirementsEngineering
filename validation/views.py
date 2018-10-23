@@ -1,8 +1,9 @@
 from django.http import HttpResponseRedirect
-from django.shortcuts import render
+from django.db.models import F
+from django.shortcuts import get_object_or_404, render
 from django.urls import reverse
 
-from .models import AnchoringResult, AuthorityResult
+from .models import AnchoringResult, AuthorityResult, Company, Data, Useful
 
 
 def anchoring(request, version):
@@ -68,6 +69,37 @@ def rand_anchoring(request):
     version = m+1
 
     return HttpResponseRedirect(reverse('anchoring', args=[version, ]))
+
+
+def requirement(request, pk=None):
+    if not pk or pk is 0:
+        if pk is not 0:
+            company = get_object_or_404(Company, name='overview')
+            company.clicks = F('clicks') + 1
+            company.save()
+
+        return render(request, 'requirement/overview.html', {
+            'companies': Company.objects.all().exclude(name='overview'),
+        })
+
+    company = get_object_or_404(Company, pk=pk)
+
+    if request.POST:
+        useful = request.POST.get('useful', None)
+
+        if useful:
+            useful = True if useful is 'y' else False
+            Useful.objects.create(company=company, useful=useful)
+
+        return HttpResponseRedirect(reverse('requirement', args=[0, ]))
+
+    company.clicks = F('clicks') + 1
+    company.save()
+
+    return render(request, 'requirement/details.html', {
+        'company': company,
+        'datalist': Data.objects.filter(company=company),
+    })
 
 
 def thanks(request):
