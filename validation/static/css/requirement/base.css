@@ -22,3 +22,19 @@
 .continue:hover{
     background: #90caf9;
 }
+
+.company p{
+    font-weight: 300;
+}
+
+.company b{
+    font-weight: 700;
+}
+
+b.bad{
+    color: #ef5350;
+}
+
+b.good{
+    color: #66bb6a;
+}

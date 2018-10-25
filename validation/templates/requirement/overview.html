@@ -5,6 +5,9 @@
 {% for company in companies %}
 <div class="company">
     <div class="company-title">{{ company.name }}</div>
+    <p>
+        {% if company.name == 'Facebook' %}<b class="good">85%</b>{% else %}<b class="bad">30%</b>{% endif %} of the readers find this useful
+    </p>
     <a class="button continue" href="{% url 'requirement' company.pk %}">Read more</a>
 </div>
 {% endfor %}
